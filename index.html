@@ -4,99 +4,177 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shaurya Ashram</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body {
+        @font-face {
+            font-family: 'Abadi';
+            src: local('Abadi'), local('AbadiMT');
+        }
+        * {
             margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fff;
+            color: #000;
         }
         header {
-            background-color: #2d3e50;
+            background-color: #000;
+            padding: 1.5rem 2rem;
             color: white;
-            padding: 1rem 2rem;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            font-size: 1.8rem;
         }
         nav {
-            background-color: #1b252f;
             display: flex;
-            justify-content: center;
-            gap: 2rem;
-            padding: 0.5rem;
+            gap: 1.5rem;
         }
         nav a {
             color: white;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
+            transition: color 0.3s;
         }
         nav a:hover {
-            text-decoration: underline;
+            color: #e91e63;
         }
         .hero {
-            background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2rem;
-            text-shadow: 1px 1px 4px #000;
-        }
-        .content {
-            padding: 2rem;
-            max-width: 900px;
-            margin: auto;
-        }
-        .section {
-            margin-bottom: 2rem;
-        }
-        footer {
-            background-color: #2d3e50;
+            background: linear-gradient(to right, #000428, #004e92);
             color: white;
             text-align: center;
-            padding: 1rem;
+            padding: 6rem 2rem;
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #004e92;
+        }
+        .section p, .section ul {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+        }
+        .motivations {
+            background: linear-gradient(135deg, #ff6a00, #ee0979);
+            padding: 4rem 2rem;
+            text-align: center;
+            font-family: 'Abadi', sans-serif;
+        }
+        .motivations h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 2rem;
+        }
+        .motivations p {
+            font-size: 1.2rem;
+            margin-bottom: 1.2rem;
+            font-weight: 600;
+            color: #fff;
+        }
+        footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 4rem;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Shaurya Ashram</h1>
-        <p>Empowering Through Discipline and Service</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#programs">Programs</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#mission">Mission</a>
-        <a href="#programs">Programs</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <div class="hero">
-        Welcome to Shaurya Ashram
-    </div>
-    <div class="content">
-        <div class="section" id="about">
-            <h2>About Us</h2>
-            <p>Shaurya Ashram is a sanctuary of strength, self-discipline, and community service. We aim to instill courage and responsibility in our youth through holistic training and education.</p>
+    <section class="hero">
+        <h2>Building Discipline. Inspiring Courage.</h2>
+        <p>Welcome to Shaurya Ashram – where young minds are shaped through strength, resilience, and purpose.</p>
+    </section>
+    <section class="section" id="about">
+        <h2>About Shaurya Ashram</h2>
+        <p>Shaurya Ashram is a sanctuary of discipline, fitness, and national spirit. Through rigorous training and value-based mentorship, we empower individuals to grow as leaders in society. Founded by passionate mentors, the Ashram provides an environment where mental strength, physical endurance, and patriotic values are cultivated every day.</p>
+        <p>Our vision is to raise a generation of empowered youth prepared to serve the nation with honor and selflessness. Whether it’s preparing for defense services, excelling in sports, or becoming responsible citizens — Shaurya Ashram leads the way.</p>
+    </section>
+    <section class="section" id="programs">
+        <h2>Programs</h2>
+        <ul>
+            <li>Daily Physical Fitness Routines</li>
+            <li>Martial Arts and Self-Defense Training</li>
+            <li>Personality Development Workshops</li>
+            <li>Leadership and Team Building Camps</li>
+            <li>Special Preparation for Armed Forces and Police Recruitments</li>
+        </ul>
+    </section>
+    <section class="section" id="gallery">
+        <h2>Image Gallery</h2>
+        <div class="gallery">
+            <img src="https://i.postimg.cc/FK9KdSDp/shaurya-group-photo.png" alt="Group Photo">
+            <img src="https://via.placeholder.com/300x200/004e92/ffffff?text=Training+Session" alt="Training">
+            <img src="https://via.placeholder.com/300x200/000428/ffffff?text=Leadership+Camp" alt="Camp">
+            <img src="https://via.placeholder.com/300x200/0074e4/ffffff?text=Events" alt="Events">
         </div>
-        <div class="section" id="mission">
-            <h2>Our Mission</h2>
-            <p>To cultivate valor, ethics, and leadership in individuals, empowering them to contribute meaningfully to society.</p>
-        </div>
-        <div class="section" id="programs">
-            <h2>Programs</h2>
-            <ul>
-                <li>Physical Training & Martial Arts</li>
-                <li>Discipline & Character Building</li>
-                <li>Community Outreach</li>
-                <li>Workshops on Leadership & Ethics</li>
-            </ul>
-        </div>
-        <div class="section" id="contact">
-            <h2>Contact Us</h2>
-            <p>Email: contact@shauryaashram.org<br>
-               Phone: +91 98765 43210<br>
-               Address: 123 Courage Lane, Honor City, India</p>
-        </div>
-    </div>
+    </section>
+    <section class="motivations">
+        <h2>Motivational Slogans</h2>
+        <p>"Discipline is the bridge between goals and achievement."</p>
+        <p>"Train hard, fight easy."</p>
+        <p>"Be strong when you are weak, brave when you are scared, and humble when you are victorious."</p>
+        <p>"Your only limit is your mind – push it further every day."</p>
+        <p>"Shaurya begins with you."</p>
+    </section>
+    <section class="section" id="contact">
+        <h2>Contact Us</h2>
+        
+        <p>The Shaurya Ashram<p>
+        <p>Founder: Shri Krishna Sharma Ji(Indian Army)<p>
+        <p>Headquarter: Sriyut college Gangeo Rewa Madhya Pradesh, India</p>
+        <p>Email: Shauryaashram@gmail.com</p>
+        <p>Phone: +91 9713616101, 9294844184</p>
+        <p>FaceBook: YouthJoshMP17</p>
+        <p>Instagram: Yet To Create</p></p>
+
+        
+        
+    </section>
     <footer>
         &copy; 2025 Shaurya Ashram. All rights reserved.
     </footer>
